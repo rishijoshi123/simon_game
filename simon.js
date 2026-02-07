@@ -15,8 +15,17 @@ $(document).keypress(function() {
     started = true;
   }
 });
-$(document).on("touchstart", function() {
-  if (!started) {
+var touchStartTime = 0;
+$(document).on("touchstart", function(e) {
+  // Prevent multiple rapid touches from triggering multiple starts
+  var currentTime = new Date().getTime();
+  if (currentTime - touchStartTime < 500) {
+    return;
+  }
+  touchStartTime = currentTime;
+  
+  // Only start game if it hasn't started and touch is not on a button
+  if (!started && !$(e.target).hasClass("btn")) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
@@ -117,4 +126,5 @@ function showCongratsPage() {
   $("#level-title").hide();
   $("#congrats-container").show();
 }
+
 
