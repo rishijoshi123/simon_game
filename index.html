@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="./simon.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="level-title">Press A Key to Start</h1>
+  <div id="game-container" class="container">
+    <div lass="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="congrats-container" style="display: none; text-align: center; margin-top: 50px;">
+    <h1 style="color: #06D6A0; font-size: 48px; margin-bottom: 30px;">🎉 CONGRATS YOU CLEARED THE GAME! 🎉</h1>
+    <p style="color: #06D6A0; font-size: 24px; margin-bottom: 20px;">You successfully completed all 5 levels!</p>
+    <button onclick="location.reload()" style="padding: 15px 30px; font-size: 18px; background-color: #06D6A0; color: #000; border: none; border-radius: 5px; cursor: pointer; font-family: 'Press Start 2P';">Play Again</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./simon.js" charset="utf-8"></script>
+
+</body>
+
+</html>
+
+
