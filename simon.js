@@ -15,6 +15,13 @@ $(document).keypress(function() {
     started = true;
   }
 });
+$(document).on("touchstart", function() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
 
 $(".btn").click(function() {
 
@@ -110,3 +117,4 @@ function showCongratsPage() {
   $("#level-title").hide();
   $("#congrats-container").show();
 }
+
